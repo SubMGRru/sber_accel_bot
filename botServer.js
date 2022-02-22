@@ -227,7 +227,7 @@ function complete_whitelist(chatId, platform, gamertag, action_type) {
     };
     (async() => {
 
-        await client.connect(process.env.server1_ip, process.env.server1_rcon_port, connectOpts);
+        await client.connect(process.env.server1_ip, parseInt(process.env.server1_rcon_port), connectOpts);
         await client.login(process.env.server1_rcon_password, loginOpts);
 
         var account_result = await check_if_verified_and_added(chatId);
@@ -245,7 +245,7 @@ function complete_whitelist(chatId, platform, gamertag, action_type) {
 
         await client.close();
 
-        await client.connect(process.env.server2_ip, process.env.server2_rcon_port, connectOpts);
+        await client.connect(process.env.server2_ip, parseInt(process.env.server2_rcon_port), connectOpts);
         await client.login(process.env.server2_rcon_password, loginOpts);
 
         if (action_type == "add") {
