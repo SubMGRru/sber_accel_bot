@@ -9,11 +9,11 @@ const util = require('minecraft-server-util');
 const mysql = require("mysql2");
 
 const connection = mysql.createConnection({
-    host: "panel.moonminecraft.site",
-    port: 3306,
-    user: "u9_FTpG0fMWOC",
-    database: "s9_telegramBot",
-    password: "AKjhBa=W.J8.EFB@LVH+Zqd1"
+    host: process.env.mysql_host,
+    port: process.env.mysql_port,
+    user: process.env.mysql_user
+    database: process.env.mysql_database,
+    password: process.env.mysql_password
 });
 connection.connect(function(err) {
     if (err) {
