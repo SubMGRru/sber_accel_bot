@@ -290,6 +290,7 @@ function complete_whitelist(chatId, platform, gamertag, action_type) {
 
 }
 
+
 function sendmsg_howtojoin(chatId, platform) {
     if (platform == "bedrock") {
         bot.sendMessage(chatId, "Добро пожаловать! \n\nIP: `sber.deqstudio.com` \nPort: `19132` \nНазвание сервера: любое \n\nИнструкция по подключению:", {
